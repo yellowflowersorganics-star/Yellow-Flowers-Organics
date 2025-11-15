@@ -1,0 +1,57 @@
+{
+  "name": "yellow-flowers-organic-farm",
+  "version": "1.0.0",
+  "description": "Yellow Flowers Organic Farm - Growing Organically. Farming Sustainably. Living Naturally.",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=8000 --no-browser",
+    "dev": "live-server --port=8000",
+    "format": "prettier --write \"**/*.{html,css,js,json,md}\"",
+    "format:check": "prettier --check \"**/*.{html,css,js,json,md}\"",
+    "lint:html": "htmlhint \"**/*.html\"",
+    "lint:css": "stylelint \"**/*.css\"",
+    "lint:js": "eslint \"**/*.js\"",
+    "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
+    "validate": "npm run format:check && npm run lint",
+    "test": "echo \"No automated tests yet\" && exit 0",
+    "build": "echo \"No build step required - static HTML site\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yellowflowersorganics-star/Yellow-Flowers-Organics.git"
+  },
+  "keywords": [
+    "organic-farming",
+    "sustainable-agriculture",
+    "bio-fertilizers",
+    "natural-farming",
+    "yellow-flowers",
+    "organic-farm",
+    "rajasthan",
+    "lemon-orchard"
+  ],
+  "author": "Yellow Flowers Organic Farm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yellowflowersorganics-star/Yellow-Flowers-Organics/issues"
+  },
+  "homepage": "https://yellowflowersorganicfarm.com",
+  "devDependencies": {
+    "eslint": "^8.50.0",
+    "htmlhint": "^1.1.4",
+    "live-server": "^1.2.2",
+    "prettier": "^3.0.3",
+    "stylelint": "^15.10.3",
+    "stylelint-config-standard": "^34.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
+
