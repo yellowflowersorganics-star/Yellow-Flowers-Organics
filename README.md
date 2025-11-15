@@ -42,8 +42,86 @@ Yellow-Flowers-Organics/
 │       ├── deploy-aws.yml  # AWS deployment workflow
 │       └── release.yml     # Release automation
 ├── DEPLOYMENT_GUIDE.md     # Complete AWS deployment guide
-└── README.md               # This file
+├── CONTRIBUTING.md         # Developer contribution guide
+├── DEVELOPER_GUIDE.md      # Technical architecture guide
+├── QE_GUIDE.md            # Quality engineering & testing
+├── RELEASE_PROCESS.md     # Release workflow
+├── TEAM_ONBOARDING.md     # New team member guide
+├── CHANGELOG.md           # Version history
+├── package.json           # Node.js dev dependencies
+└── README.md              # This file
 ```
+
+## 📚 Documentation for Team Members
+
+### 🎯 Start Here
+
+| If you are... | Start with... | Then read... |
+|---------------|---------------|--------------|
+| **New Team Member** | [TEAM_ONBOARDING.md](TEAM_ONBOARDING.md) | Role-specific guides below |
+| **Developer** | [CONTRIBUTING.md](CONTRIBUTING.md) | [DEVELOPER_GUIDE.md](DEVELOPER_GUIDE.md) |
+| **QA/Tester** | [QE_GUIDE.md](QE_GUIDE.md) | [CONTRIBUTING.md](CONTRIBUTING.md) |
+| **DevOps** | [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md) | [QUICK_START.md](QUICK_START.md) |
+| **Release Manager** | [RELEASE_PROCESS.md](RELEASE_PROCESS.md) | [CONTRIBUTING.md](CONTRIBUTING.md) |
+| **Product Owner** | [README.md](README.md) | [RELEASE_PROCESS.md](RELEASE_PROCESS.md) |
+
+### 📖 Complete Documentation
+
+1. **[TEAM_ONBOARDING.md](TEAM_ONBOARDING.md)** - *Start here!*
+   - Complete onboarding guide for new team members
+   - Role-based learning paths (Developer, QA, DevOps, PM)
+   - Your first task by role
+   - Tools, resources, and getting help
+
+2. **[CONTRIBUTING.md](CONTRIBUTING.md)** - *Essential for all contributors*
+   - Machine setup (Git, Node.js, dev tools)
+   - Development workflow (Git Flow)
+   - Coding standards (HTML, CSS, JS)
+   - Pull request process
+   - Testing checklist
+
+3. **[DEVELOPER_GUIDE.md](DEVELOPER_GUIDE.md)** - *Deep technical dive*
+   - Complete tech stack breakdown
+   - Project architecture and file structure
+   - CSS architecture (BEM methodology)
+   - JavaScript features
+   - How to add new articles
+   - Common development tasks
+   - Debugging tips
+
+4. **[QE_GUIDE.md](QE_GUIDE.md)** - *Quality & testing*
+   - Testing strategy and test pyramid
+   - Testing environments (local, dev, staging, prod)
+   - Complete test cases with expected results
+   - Browser & device testing matrix
+   - Performance testing (Lighthouse)
+   - Accessibility testing (WCAG 2.1)
+   - Bug reporting templates
+
+5. **[RELEASE_PROCESS.md](RELEASE_PROCESS.md)** - *Release management*
+   - Release strategy and types
+   - Semantic versioning explained
+   - Release checklist (pre-release, release day, post-release)
+   - Hotfix process for critical bugs
+   - Rollback procedures
+   - Release notes templates
+
+6. **[DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md)** - *AWS deployment*
+   - AWS S3 bucket setup
+   - IAM user and policy configuration
+   - GitHub Actions secrets setup
+   - CloudFront CDN (optional)
+   - Troubleshooting deployment issues
+
+7. **[QUICK_START.md](QUICK_START.md)** - *Fast AWS setup*
+   - Concise AWS setup steps
+   - Quick deployment checklist
+   - First deployment walkthrough
+
+8. **[CHANGELOG.md](CHANGELOG.md)** - *Version history*
+   - All releases and changes
+   - What's new in each version
+   - Bug fixes and improvements
 
 ## 🎨 Design Features
 
