@@ -1,0 +1,90 @@
+name: 📚 Documentation Update
+description: Suggest improvements to documentation
+title: "[Docs]: "
+labels: ["documentation", "triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve our documentation!
+
+  - type: dropdown
+    id: doc-type
+    attributes:
+      label: Documentation Type
+      description: What type of documentation needs updating?
+      options:
+        - README.md
+        - CONTRIBUTING.md
+        - DEVELOPER_GUIDE.md
+        - QE_GUIDE.md
+        - RELEASE_PROCESS.md
+        - DEPLOYMENT_GUIDE.md
+        - BRANCH_PROTECTION.md
+        - Article Content
+        - Code Comments
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue
+    attributes:
+      label: What's Wrong or Missing?
+      description: Describe what's unclear, outdated, or missing
+      placeholder: The documentation for X doesn't explain...
+    validations:
+      required: true
+
+  - type: textarea
+    id: location
+    attributes:
+      label: Location
+      description: Where in the documentation is this issue?
+      placeholder: |
+        File: CONTRIBUTING.md
+        Section: "Git Workflow"
+        Line: 150
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested Improvement
+      description: How should this be improved?
+      placeholder: This should be changed to...
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How critical is this documentation issue?
+      options:
+        - 🔴 Critical (incorrect/misleading information)
+        - 🟠 High (missing important information)
+        - 🟡 Medium (unclear explanation)
+        - 🟢 Low (typo, formatting)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: willing-to-fix
+    attributes:
+      label: Can You Fix This?
+      description: Are you willing to submit a PR to fix this?
+      options:
+        - ✅ Yes, I can fix this
+        - ⚠️ I can help, but need guidance
+        - ❌ No, just reporting
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Add any other context about the documentation issue
+

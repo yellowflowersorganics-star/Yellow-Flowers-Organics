@@ -1,0 +1,112 @@
+name: PR Issue Validator
+
+on:
+  pull_request:
+    types: [opened, edited, reopened, synchronize]
+
+jobs:
+  validate-issue-link:
+    name: Validate Issue Link
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Check PR body for issue reference
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const prBody = pr.body || '';
+            const prTitle = pr.title || '';
+            
+            // Check for various issue reference patterns
+            const issuePatterns = [
+              /#\d+/,                          // #123
+              /(?:close|closes|closed|fix|fixes|fixed|resolve|resolves|resolved)\s+#\d+/i,  // closes #123
+              /(?:issue|related to|part of)\s+#\d+/i,  // issue #123
+              /https?:\/\/github\.com\/[^\/]+\/[^\/]+\/issues\/\d+/  // Full URL
+            ];
+            
+            // Check if any pattern matches in PR body or title
+            const hasIssueReference = issuePatterns.some(pattern => 
+              pattern.test(prBody) || pattern.test(prTitle)
+            );
+            
+            if (!hasIssueReference) {
+              const message = `❌ **PR Validation Failed: No Issue Linked**
+            
+            This Pull Request must be linked to a GitHub Issue before it can be merged.
+            
+            ## ✅ How to Fix:
+            
+            ### Option 1: Reference in PR Description (Recommended)
+            Edit your PR description and add one of these:
+            \`\`\`
+            Closes #123
+            Fixes #456
+            Resolves #789
+            Related to #999
+            \`\`\`
+            
+            ### Option 2: Reference in PR Title
+            \`\`\`
+            feat: Add new feature (#123)
+            fix: Bug fix for navigation (#456)
+            \`\`\`
+            
+            ### Option 3: Link Existing Issue
+            1. Go to the right sidebar
+            2. Under "Development", click "Link an issue"
+            3. Select the related issue
+            
+            ## 📋 Don't Have an Issue Yet?
+            
+            1. Create a new issue: [Create Issue](${context.payload.repository.html_url}/issues/new/choose)
+            2. Describe what this PR does
+            3. Come back and reference it here
+            
+            ## 🚫 Why This Requirement?
+            
+            - ✅ Ensures all work is tracked and planned
+            - ✅ Provides context for reviewers
+            - ✅ Links code changes to requirements
+            - ✅ Enables better project management
+            - ✅ Creates audit trail
+            
+            ## 🆘 Need Help?
+            
+            See: [CONTRIBUTING.md](${context.payload.repository.html_url}/blob/main/CONTRIBUTING.md#linking-prs-to-issues)
+            `;
+              
+              // Post comment
+              await github.rest.issues.createComment({
+                issue_number: pr.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: message
+              });
+              
+              // Fail the check
+              core.setFailed('❌ This PR must be linked to an issue. See the comment above for instructions.');
+            } else {
+              console.log('✅ PR is properly linked to an issue');
+              
+              // Extract issue numbers
+              const issueNumbers = [];
+              const matches = prBody.match(/#(\d+)/g) || [];
+              matches.forEach(match => {
+                issueNumbers.push(match.replace('#', ''));
+              });
+              
+              if (issueNumbers.length > 0) {
+                await github.rest.issues.createComment({
+                  issue_number: pr.number,
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  body: `✅ **Issue Link Validation Passed**\n\nThis PR is linked to issue(s): ${issueNumbers.map(n => `#${n}`).join(', ')}\n\nThank you for following best practices! 🎉`
+                });
+              }
+            }
+
+      - name: Validation complete
+        run: echo "✅ PR issue validation complete"
+

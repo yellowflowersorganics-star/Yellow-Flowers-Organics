@@ -1,0 +1,121 @@
+name: 📝 New Article Request
+description: Request a new Learning Center article
+title: "[Article]: "
+labels: ["content", "article", "triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Request a new article for the Learning Center!
+
+  - type: input
+    id: article-title
+    attributes:
+      label: Article Title
+      description: What should this article be called?
+      placeholder: e.g., "Phosphate Solubilizing Bacteria Guide"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Article Category
+      description: Which category does this article belong to?
+      options:
+        - Bio-Fertilizers (nitrogen fixers, PSB, KMB)
+        - Bio-Pesticides (natural pest control)
+        - Bio-Fungicides (disease control)
+        - Bio-Stimulants (growth promoters)
+        - Composting (waste management)
+        - Soil Management
+        - Water Management
+        - Integrated Farming
+        - Organic Practices
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Article Description
+      description: What should this article cover?
+      placeholder: |
+        This article should explain:
+        - What is [topic]
+        - How it works
+        - Benefits for organic farming
+        - How to prepare/multiply
+        - Application methods
+        - Best practices
+    validations:
+      required: true
+
+  - type: textarea
+    id: key-points
+    attributes:
+      label: Key Points to Cover
+      description: List the main topics this article should include
+      placeholder: |
+        - Introduction
+        - Key features and benefits
+        - Preparation/multiplication method
+        - Application guidelines
+        - Do's and don'ts
+        - Farm experiences
+    validations:
+      required: true
+
+  - type: textarea
+    id: target-audience
+    attributes:
+      label: Target Audience
+      description: Who will benefit from this article?
+      placeholder: Small-scale organic farmers, home gardeners, agriculture students, etc.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this article?
+      options:
+        - 🔴 High (commonly requested, essential topic)
+        - 🟡 Medium (useful addition)
+        - 🟢 Low (nice to have)
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References/Sources
+      description: Any sources, links, or references for content?
+      placeholder: |
+        - Research papers
+        - NCOF guidelines
+        - Personal farm experience
+        - Other websites
+
+  - type: dropdown
+    id: can-write
+    attributes:
+      label: Can You Write This?
+      description: Are you able to write this article?
+      options:
+        - ✅ Yes, I have the knowledge and can write it
+        - ⚠️ I can help, but need collaboration
+        - ❌ No, just requesting
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other information about this article request?
+

@@ -403,6 +403,55 @@ SEO: >90
 
 ## 📬 Pull Request Process
 
+### ⚠️ Important: PRs Must Be Linked to Issues
+
+**Every Pull Request MUST be linked to a GitHub Issue before it can be merged.**
+
+#### Why This Requirement?
+- ✅ Ensures all work is tracked and planned
+- ✅ Provides context for reviewers
+- ✅ Links code changes to requirements
+- ✅ Enables better project management
+- ✅ Creates audit trail
+
+#### How to Link PRs to Issues
+
+**Option 1: Use Keywords in PR Description (Recommended)**
+
+In your PR description, use one of these keywords followed by the issue number:
+
+```markdown
+Closes #123
+Fixes #456
+Resolves #789
+Related to #999
+```
+
+**Option 2: Reference in PR Title**
+
+```
+feat: Add new feature (#123)
+fix: Bug fix for navigation (#456)
+```
+
+**Option 3: Link in GitHub UI**
+
+1. Go to your PR
+2. In the right sidebar, under "Development"
+3. Click "Link an issue from this repository"
+4. Select the related issue
+
+#### Don't Have an Issue Yet?
+
+1. Create an issue first: [Create Issue](https://github.com/yellowflowersorganics-star/Yellow-Flowers-Organics/issues/new/choose)
+2. Describe what your PR will do
+3. Get approval/discussion if needed
+4. Then create your PR and link it
+
+**Note**: Our automated workflow will check for issue links and block PRs that don't have them!
+
+---
+
 ### 1. Create Pull Request
 
 On GitHub:
@@ -410,8 +459,9 @@ On GitHub:
 2. Click "New Pull Request"
 3. Base: `develop` ← Compare: `feature/your-branch`
 4. Fill in PR template (see below)
-5. Assign reviewers
-6. Add labels (enhancement, bug, documentation)
+5. **Link to related issue** (REQUIRED - see above)
+6. Assign reviewers
+7. Add labels (enhancement, bug, documentation)
 
 ### 2. PR Template
 

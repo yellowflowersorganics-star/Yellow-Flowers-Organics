@@ -1,0 +1,12 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Ask a Question
+    url: https://github.com/yellowflowersorganics-star/Yellow-Flowers-Organics/discussions
+    about: Ask questions and discuss with the community
+  - name: 📖 Documentation
+    url: https://github.com/yellowflowersorganics-star/Yellow-Flowers-Organics#-documentation-for-team-members
+    about: Read our comprehensive documentation guides
+  - name: 🚀 Quick Start Guide
+    url: https://github.com/yellowflowersorganics-star/Yellow-Flowers-Organics/blob/main/TEAM_ONBOARDING.md
+    about: New to the team? Start here!
+
