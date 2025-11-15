@@ -123,6 +123,13 @@ Yellow-Flowers-Organics/
    - What's new in each version
    - Bug fixes and improvements
 
+9. **[BRANCH_PROTECTION.md](BRANCH_PROTECTION.md)** - *Branch protection rules*
+   - Why branch protection is important
+   - Step-by-step setup for main and develop branches
+   - Required status checks configuration
+   - Emergency bypass procedures
+   - CODEOWNERS file setup
+
 ## 🎨 Design Features
 
 ### Color Palette
