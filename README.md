@@ -130,6 +130,22 @@ Yellow-Flowers-Organics/
    - Emergency bypass procedures
    - CODEOWNERS file setup
 
+10. **[QUICK_REFERENCE.md](QUICK_REFERENCE.md)** - *One-page cheat sheet* ⚡
+    - Daily workflow commands
+    - Commit message format
+    - Testing checklist
+    - Common mistakes to avoid
+    - Quick troubleshooting
+    - All essential commands
+
+11. **[WORKFLOW_DIAGRAM.md](WORKFLOW_DIAGRAM.md)** - *Visual workflow diagrams*
+    - Standard development workflow
+    - Hotfix workflow
+    - Release workflow
+    - PR validation flow
+    - Branch strategy diagram
+    - Testing flow
+
 ## 🎨 Design Features
 
 ### Color Palette
