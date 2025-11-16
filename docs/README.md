@@ -38,9 +38,10 @@ Welcome to the Yellow Flowers Organic Farm documentation! This index will help y
 
 | Document | Description | Covers |
 |----------|-------------|--------|
-| [Deployment Guide](deployment/DEPLOYMENT_GUIDE.md) | Complete AWS S3 + CloudFront setup | IAM, S3, CloudFront, GitHub Secrets |
+| **[AWS Infrastructure](deployment/AWS_INFRASTRUCTURE.md)** ⭐ | **Multi-environment setup (DEV + PROD)** | Complete infrastructure for both environments |
+| [Deployment Guide](deployment/DEPLOYMENT_GUIDE.md) | Single environment AWS setup | IAM, S3, CloudFront, GitHub Secrets |
 
-**👉 One-Time Setup**: Follow this for initial AWS configuration
+**👉 Recommended**: Start with **AWS Infrastructure** guide for proper dev/prod setup
 
 ---
 
@@ -100,10 +101,11 @@ Welcome to the Yellow Flowers Organic Farm documentation! This index will help y
 3. [Contributing](development/CONTRIBUTING.md) - Bug reporting
 
 ### 🚀 DevOps / Admin
-1. [Quick Start](getting-started/QUICK_START.md) - Fast deployment
-2. [Deployment Guide](deployment/DEPLOYMENT_GUIDE.md) - Detailed setup
-3. [Branch Protection](github/BRANCH_PROTECTION.md) - Security setup
-4. [Release Process](release/RELEASE_PROCESS.md) - Release management
+1. **[AWS Infrastructure](deployment/AWS_INFRASTRUCTURE.md)** - Multi-environment setup (DEV + PROD) ⭐
+2. [Quick Start](getting-started/QUICK_START.md) - Fast single-environment deployment
+3. [Deployment Guide](deployment/DEPLOYMENT_GUIDE.md) - Detailed single-environment setup
+4. [Branch Protection](github/BRANCH_PROTECTION.md) - Security setup
+5. [Release Process](release/RELEASE_PROCESS.md) - Release management
 
 ### 📝 Content Writer
 1. [Developer Guide](development/DEVELOPER_GUIDE.md) - Section: "Adding New Articles"
@@ -127,7 +129,8 @@ Welcome to the Yellow Flowers Organic Farm documentation! This index will help y
 
 | I want to... | Read this |
 |--------------|-----------|
-| Deploy the website to AWS | [Quick Start](getting-started/QUICK_START.md) or [Deployment Guide](deployment/DEPLOYMENT_GUIDE.md) |
+| Set up dev and production environments | [AWS Infrastructure](deployment/AWS_INFRASTRUCTURE.md) ⭐ |
+| Deploy the website to AWS (simple) | [Quick Start](getting-started/QUICK_START.md) or [Deployment Guide](deployment/DEPLOYMENT_GUIDE.md) |
 | Add a new article | [Developer Guide](development/DEVELOPER_GUIDE.md) → "Adding New Articles" |
 | Create a pull request | [Contributing](development/CONTRIBUTING.md) → "Pull Request Process" |
 | Set up my local machine | [Contributing](development/CONTRIBUTING.md) → "Machine Setup" |
@@ -182,9 +185,10 @@ Found something unclear? Help improve it!
 
 ## 📊 Documentation Statistics
 
-- **Total Guides**: 11
+- **Total Guides**: 12
 - **Categories**: 6
 - **Average Reading Time**: 10-30 minutes per guide
+- **Most Comprehensive**: AWS Infrastructure (multi-environment setup)
 - **Last Updated**: November 2025
 
 ---

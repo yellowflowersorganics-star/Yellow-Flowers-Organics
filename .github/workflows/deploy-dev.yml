@@ -1,15 +1,15 @@
-name: Deploy to PRODUCTION
+name: Deploy to DEV
 
 on:
   push:
     branches:
-      - main
+      - develop
   workflow_dispatch: # Allow manual trigger
 
 jobs:
-  deploy:
+  deploy-dev:
     runs-on: ubuntu-latest
-    environment: production
+    environment: development
     
     steps:
       - name: Checkout code
@@ -18,13 +18,13 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID_PROD }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_PROD }}
-          aws-region: ${{ secrets.AWS_REGION_PROD }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID_DEV }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_DEV }}
+          aws-region: ${{ secrets.AWS_REGION_DEV }}
 
-      - name: Sync files to S3 (PRODUCTION)
+      - name: Sync files to S3 (DEV)
         run: |
-          aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME_PROD }} \
+          aws s3 sync . s3://${{ secrets.S3_BUCKET_NAME_DEV }} \
             --exclude ".git/*" \
             --exclude ".github/*" \
             --exclude "node_modules/*" \
@@ -35,26 +35,26 @@ jobs:
             --exclude "package-lock.json" \
             --exclude "CHANGELOG.md" \
             --delete \
-            --cache-control "public, max-age=31536000" \
+            --cache-control "public, max-age=3600" \
             --metadata-directive REPLACE
 
       - name: Set correct content types
         run: |
-          aws s3 cp s3://${{ secrets.S3_BUCKET_NAME_PROD }} s3://${{ secrets.S3_BUCKET_NAME_PROD }} \
+          aws s3 cp s3://${{ secrets.S3_BUCKET_NAME_DEV }} s3://${{ secrets.S3_BUCKET_NAME_DEV }} \
             --recursive \
             --exclude "*" \
             --include "*.html" \
             --content-type "text/html; charset=utf-8" \
             --metadata-directive REPLACE
           
-          aws s3 cp s3://${{ secrets.S3_BUCKET_NAME_PROD }} s3://${{ secrets.S3_BUCKET_NAME_PROD }} \
+          aws s3 cp s3://${{ secrets.S3_BUCKET_NAME_DEV }} s3://${{ secrets.S3_BUCKET_NAME_DEV }} \
             --recursive \
             --exclude "*" \
             --include "*.css" \
             --content-type "text/css; charset=utf-8" \
             --metadata-directive REPLACE
           
-          aws s3 cp s3://${{ secrets.S3_BUCKET_NAME_PROD }} s3://${{ secrets.S3_BUCKET_NAME_PROD }} \
+          aws s3 cp s3://${{ secrets.S3_BUCKET_NAME_DEV }} s3://${{ secrets.S3_BUCKET_NAME_DEV }} \
             --recursive \
             --exclude "*" \
             --include "*.js" \
@@ -62,16 +62,16 @@ jobs:
             --metadata-directive REPLACE
 
       - name: Invalidate CloudFront cache (if using CloudFront)
-        if: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID_PROD != '' }}
+        if: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID_DEV != '' }}
         run: |
           aws cloudfront create-invalidation \
-            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID_PROD }} \
+            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID_DEV }} \
             --paths "/*"
 
       - name: Deployment complete
         run: |
-          echo "✅ PRODUCTION Deployment completed successfully!"
-          echo "🌐 Production URL: http://${{ secrets.S3_BUCKET_NAME_PROD }}.s3-website-${{ secrets.AWS_REGION_PROD }}.amazonaws.com"
+          echo "✅ DEV Deployment completed successfully!"
+          echo "🌐 DEV URL: http://${{ secrets.S3_BUCKET_NAME_DEV }}.s3-website-${{ secrets.AWS_REGION_DEV }}.amazonaws.com"
           echo "🔍 Commit: ${{ github.sha }}"
           echo "👤 Author: ${{ github.actor }}"
 
