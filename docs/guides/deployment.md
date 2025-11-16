@@ -815,10 +815,9 @@ TOTAL PROD:                  ~$1.00/month
 
 ## 📚 Related Documentation
 
-- [Quick Start Guide](../getting-started/QUICK_START.md) - Fast single-environment setup
-- [Deployment Guide](DEPLOYMENT_GUIDE.md) - Detailed single-environment guide
-- [Release Process](../release/RELEASE_PROCESS.md) - How to manage releases
-- [Contributing](../development/CONTRIBUTING.md) - Development workflow
+- [Quick Start Guide](../quick-reference/quick-start.md) - Fast single-environment setup
+- [Release Process](release-process.md) - How to manage releases
+- [Contributing](contributing.md) - Development workflow
 
 ---
 

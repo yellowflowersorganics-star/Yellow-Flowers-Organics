@@ -75,11 +75,11 @@ Yellow-Flowers-Organics/
 
 ### 🎯 New Project from Scratch?
 
-**📖 [Zero to Production Guide](docs/getting-started/zero-to-production/README.md)** 🚀
+**📖 [Zero to Production Guide](docs/zero-to-production/README.md)** 🚀
 
 Complete step-by-step guide to go from a fresh machine with just an idea → Live website on AWS with dev and production environments. Takes 4-6 hours.
 
-**NOW REORGANIZED**: Split into 8 easy-to-follow phases + troubleshooting guide + checklist!
+**REORGANIZED & SIMPLIFIED**: 8 easy phases + troubleshooting + checklist! Now with streamlined folder structure!
 
 Covers: Machine setup, GitHub, project creation, AWS infrastructure, CI/CD, branch protection, and first deployment!
 
@@ -89,37 +89,32 @@ Covers: Machine setup, GitHub, project creation, AWS infrastructure, CI/CD, bran
 
 | If you are... | Start with... | Then read... |
 |---------------|---------------|--------------|
-| **New Team Member** | [Team Onboarding](docs/getting-started/TEAM_ONBOARDING.md) | Role-specific guides below |
-| **Developer** | [Contributing](docs/development/CONTRIBUTING.md) | [Developer Guide](docs/development/DEVELOPER_GUIDE.md) |
-| **QA/Tester** | [QE Guide](docs/quality/QE_GUIDE.md) | [Contributing](docs/development/CONTRIBUTING.md) |
-| **DevOps** | [Quick Start](docs/getting-started/QUICK_START.md) | [Deployment Guide](docs/deployment/DEPLOYMENT_GUIDE.md) |
-| **Release Manager** | [Release Process](docs/release/RELEASE_PROCESS.md) | [Workflow Diagram](docs/development/WORKFLOW_DIAGRAM.md) |
+| **New Team Member** | [Team Onboarding](docs/quick-reference/team-onboarding.md) | Role-specific guides below |
+| **Developer** | [Contributing](docs/guides/contributing.md) | [Developer Guide](docs/guides/developer-guide.md) |
+| **QA/Tester** | [Testing Guide](docs/guides/testing.md) | [Contributing](docs/guides/contributing.md) |
+| **DevOps** | [Quick Start](docs/quick-reference/quick-start.md) | [Deployment Guide](docs/guides/deployment.md) |
+| **Release Manager** | [Release Process](docs/guides/release-process.md) | [Workflow Diagrams](docs/guides/workflow-diagrams.md) |
 
 ### 📖 Documentation Categories
 
-#### 🚀 Getting Started
-- **[Team Onboarding](docs/getting-started/TEAM_ONBOARDING.md)** - Complete onboarding for new members
-- **[Quick Start](docs/getting-started/QUICK_START.md)** - Fast AWS deployment (20 mins)
-- **[Quick Reference](docs/getting-started/QUICK_REFERENCE.md)** - Daily cheat sheet ⚡
+#### 🚀 Zero to Production (Complete Guide)
+- **[Full Guide](docs/zero-to-production/README.md)** - Step-by-step from zero to live! (8 phases)
+- **[Checklist](docs/zero-to-production/checklist.md)** - Track your progress
+- **[Troubleshooting](docs/zero-to-production/troubleshooting.md)** - Common issues & solutions
 
-#### 💻 Development
-- **[Developer Guide](docs/development/DEVELOPER_GUIDE.md)** - Technical architecture & how-tos
-- **[Contributing](docs/development/CONTRIBUTING.md)** - Workflow, standards, PR process
-- **[Workflow Diagram](docs/development/WORKFLOW_DIAGRAM.md)** - Visual workflow guides
+#### 📖 Comprehensive Guides
+- **[Deployment](docs/guides/deployment.md)** - AWS setup (DEV + PROD), S3, CloudFront, IAM
+- **[Branch Protection](docs/guides/branch-protection.md)** - Protect main/develop branches
+- **[Contributing](docs/guides/contributing.md)** - Git workflow, coding standards, PR process
+- **[Developer Guide](docs/guides/developer-guide.md)** - Tech stack, architecture, adding articles
+- **[Testing](docs/guides/testing.md)** - QE strategy, test cases, browser testing
+- **[Release Process](docs/guides/release-process.md)** - Versioning, releases, hotfixes
+- **[Workflow Diagrams](docs/guides/workflow-diagrams.md)** - Visual Git flow
 
-#### 🚢 Deployment
-- **[Deployment Guide](docs/deployment/DEPLOYMENT_GUIDE.md)** - AWS S3 + CloudFront setup
-
-#### ✅ Quality & Testing
-- **[QE Guide](docs/quality/QE_GUIDE.md)** - Testing strategy & test cases
-
-#### 🎯 Release Management
-- **[Release Process](docs/release/RELEASE_PROCESS.md)** - Versioning, releases, hotfixes
-- **[CHANGELOG](CHANGELOG.md)** - Version history
-
-#### 🔧 GitHub Setup
-- **[Branch Protection](docs/github/BRANCH_PROTECTION.md)** - Protect main & develop
-- **[Setup Guide](docs/github/SETUP_BRANCH_PROTECTION.md)** - Quick visual setup
+#### ⚡ Quick Reference
+- **[Commands](docs/quick-reference/commands.md)** - Daily cheat sheet for Git, npm, AWS
+- **[Quick Start](docs/quick-reference/quick-start.md)** - Fast AWS deployment (20 mins)
+- **[Team Onboarding](docs/quick-reference/team-onboarding.md)** - New member onboarding
 
 > 💡 **Tip**: Bookmark the [Documentation Index](docs/README.md) for easy access to all guides!
 
@@ -351,7 +346,7 @@ Each article includes:
 
 ### Quick Start
 1. Clone the repository
-2. Configure AWS credentials (see [Quick Start Guide](docs/getting-started/QUICK_START.md))
+2. Configure AWS credentials (see [Quick Start Guide](docs/quick-reference/quick-start.md))
 3. Push to `main` branch - automatically deploys!
 
 ### Deployment Options
@@ -375,7 +370,7 @@ This creates a GitHub release with changelog and deployment package.
 #### 3. Manual Deployment
 Trigger deployment from GitHub Actions tab.
 
-See [Deployment Guide](docs/deployment/DEPLOYMENT_GUIDE.md) for complete AWS setup instructions.
+See [Deployment Guide](docs/guides/deployment.md) for complete AWS setup instructions.
 
 ## 📝 Future Enhancements
 

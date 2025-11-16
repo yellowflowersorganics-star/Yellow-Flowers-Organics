@@ -64,9 +64,9 @@ Create a welcome message or email:
    ```
 
 4. **Read the documentation**
-   - 📖 [Quick Reference](docs/getting-started/QUICK_REFERENCE.md) - Daily commands
-   - 📖 [Contributing Guide](docs/development/CONTRIBUTING.md) - How to contribute
-   - 📖 [Developer Guide](docs/development/DEVELOPER_GUIDE.md) - Technical details
+   - 📖 [Commands Cheat Sheet](../quick-reference/commands.md) - Daily commands
+   - 📖 [Contributing Guide](../guides/contributing.md) - How to contribute
+   - 📖 [Developer Guide](../guides/developer-guide.md) - Technical details
 
 5. **Test local development**
    ```bash
@@ -387,9 +387,9 @@ git push origin develop
 
 ## 📚 Additional Resources
 
-- **Full Onboarding**: [Team Onboarding Guide](../TEAM_ONBOARDING.md)
-- **Contributing**: [Contributing Guide](../../development/CONTRIBUTING.md)
-- **Quick Reference**: [Daily Commands Cheat Sheet](../QUICK_REFERENCE.md)
+- **Full Onboarding**: [Team Onboarding Guide](../quick-reference/team-onboarding.md)
+- **Contributing**: [Contributing Guide](../guides/contributing.md)
+- **Quick Reference**: [Daily Commands Cheat Sheet](../quick-reference/commands.md)
 
 ---
 

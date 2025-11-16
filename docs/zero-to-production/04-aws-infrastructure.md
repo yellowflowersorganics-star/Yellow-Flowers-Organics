@@ -2,7 +2,7 @@
 
 **Goal**: Set up cloud hosting for both DEV and PRODUCTION environments
 
-📖 **Full Detailed Guide**: [AWS Infrastructure Setup](../../deployment/AWS_INFRASTRUCTURE.md)
+📖 **Full Detailed Guide**: [AWS Infrastructure Setup](../guides/deployment.md)
 
 ---
 
@@ -262,7 +262,7 @@ my-awesome-website-2024-dev
 
 ## 📚 Need More Help?
 
-- **Detailed AWS Guide**: [Complete AWS Infrastructure Setup](../../deployment/AWS_INFRASTRUCTURE.md)
+- **Detailed AWS Guide**: [Complete AWS Infrastructure Setup](../guides/deployment.md)
 - **S3 Documentation**: [AWS S3 Static Website Hosting](https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html)
 - **IAM Documentation**: [AWS IAM Best Practices](https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html)
 

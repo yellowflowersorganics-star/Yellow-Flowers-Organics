@@ -2,7 +2,7 @@
 
 **Goal**: Secure your workflow by protecting main and develop branches
 
-📖 **Full Guide**: [Complete Branch Protection Setup](../../github/SETUP_BRANCH_PROTECTION.md)
+📖 **Full Guide**: [Complete Branch Protection Setup](../guides/branch-protection.md)
 
 ---
 
@@ -201,7 +201,7 @@ git push origin feature/my-feature
 
 ## 📚 Additional Reading
 
-- **Full Guide**: [Branch Protection Setup with Screenshots](../../github/SETUP_BRANCH_PROTECTION.md)
+- **Full Guide**: [Branch Protection Setup with Screenshots](../guides/branch-protection.md)
 - **GitHub Docs**: [About Protected Branches](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches)
 
 ---
