@@ -442,29 +442,32 @@ A beautiful, modern website built with HTML, CSS, and JavaScript.
 
 ## Development
 
+Open `index.html` in your browser to view the website locally.
+
 ```bash
 # Clone repository
 git clone [your-repo-url]
 
+# Navigate to folder
+cd my-awesome-website
+
 # Open in browser
-# Just open index.html or use a local server
-
-# Using Python
-python -m http.server 8000
-
-# Using Node.js
-npx http-server
+open index.html
 ```
 
-## Deployment
+## Next Steps
 
-Automatically deploys to AWS S3:
-- Dev: Push to `develop` branch
-- Prod: Push to `main` branch
+- [ ] Set up AWS infrastructure
+- [ ] Configure deployment workflows
+- [ ] Deploy to production
 
 ## License
 
-Copyright © 2025
+MIT License - Copyright © 2025
+
+---
+
+**Note**: This README will be updated later with deployment information once AWS is configured.
 ```
 
 **Create `package.json`**:
@@ -934,6 +937,50 @@ git push origin develop
 - [ ] PROD deployment successful
 - [ ] PROD site accessible
 - [ ] Changes visible on both environments
+
+### Step 7.5: Update README with Deployment Info
+
+Now that deployment is working, update your README.md with the deployment information:
+
+```bash
+# Switch to main branch (or develop)
+git checkout main
+git pull origin main
+```
+
+**Update `README.md`** - Replace the "## Next Steps" section with:
+
+```markdown
+## Deployment
+
+This website automatically deploys to AWS S3:
+
+### Development Environment
+- **Branch**: `develop`
+- **URL**: http://my-awesome-website-dev.s3-website-us-east-1.amazonaws.com
+- **Trigger**: Automatic on push to `develop` branch
+
+### Production Environment
+- **Branch**: `main`  
+- **URL**: http://my-awesome-website-prod.s3-website-us-east-1.amazonaws.com
+- **Trigger**: Automatic on merge to `main` branch (via PR)
+
+### Workflow
+1. Create feature branch from `develop`
+2. Make changes and test locally
+3. Push to `develop` → Auto-deploys to DEV
+4. Test on DEV environment
+5. Create PR from `develop` to `main`
+6. Merge PR → Auto-deploys to PRODUCTION
+```
+
+**Commit the updated README**:
+
+```bash
+git add README.md
+git commit -m "docs: Update README with deployment URLs"
+git push origin main
+```
 
 ---
 
