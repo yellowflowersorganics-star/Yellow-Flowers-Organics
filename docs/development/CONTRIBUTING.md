@@ -28,6 +28,12 @@ Welcome to the team! This guide will help you get started with development, test
 
 ## 🖥️ Machine Setup
 
+> **📖 For detailed setup instructions**, see: [Machine Setup Guide](../getting-started/MACHINE_SETUP.md)
+>
+> This guide covers platform-specific installation for Git, Node.js, VS Code, AWS CLI, and troubleshooting.
+
+### Quick Setup (Summary)
+
 ### 1. Clone the Repository
 
 ```bash

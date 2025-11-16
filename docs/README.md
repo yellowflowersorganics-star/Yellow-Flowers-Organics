@@ -10,11 +10,12 @@ Welcome to the Yellow Flowers Organic Farm documentation! This index will help y
 
 | Document | Description | For |
 |----------|-------------|-----|
+| **[Machine Setup](getting-started/MACHINE_SETUP.md)** ⭐ | **Complete dev environment setup** (Git, Node.js, AWS CLI, VS Code) | Everyone - Start here! |
 | [Quick Start](getting-started/QUICK_START.md) | Fast AWS deployment setup (20 mins) | Admins, DevOps |
 | [Team Onboarding](getting-started/TEAM_ONBOARDING.md) | Complete onboarding guide for new team members | Everyone |
 | [Quick Reference](getting-started/QUICK_REFERENCE.md) | Daily cheat sheet for common tasks | Everyone |
 
-**👉 Start Path**: Team Onboarding → Quick Reference → Your Role-Specific Guide
+**👉 Start Path**: Machine Setup → Team Onboarding → Quick Reference → Your Role-Specific Guide
 
 ---
 
@@ -85,9 +86,10 @@ Welcome to the Yellow Flowers Organic Farm documentation! This index will help y
 ## 📋 Quick Navigation by Role
 
 ### 🆕 New Team Member
-1. [Team Onboarding](getting-started/TEAM_ONBOARDING.md)
-2. [Quick Reference](getting-started/QUICK_REFERENCE.md)
-3. Your role-specific guide below ⬇️
+1. [Machine Setup](getting-started/MACHINE_SETUP.md) - Set up your computer first ⭐
+2. [Team Onboarding](getting-started/TEAM_ONBOARDING.md) - Complete onboarding guide
+3. [Quick Reference](getting-started/QUICK_REFERENCE.md) - Daily cheat sheet
+4. Your role-specific guide below ⬇️
 
 ### 👨‍💻 Developer
 1. [Developer Guide](development/DEVELOPER_GUIDE.md) - Read first
@@ -129,11 +131,11 @@ Welcome to the Yellow Flowers Organic Farm documentation! This index will help y
 
 | I want to... | Read this |
 |--------------|-----------|
+| Set up my computer for development | [Machine Setup](getting-started/MACHINE_SETUP.md) ⭐ |
 | Set up dev and production environments | [AWS Infrastructure](deployment/AWS_INFRASTRUCTURE.md) ⭐ |
 | Deploy the website to AWS (simple) | [Quick Start](getting-started/QUICK_START.md) or [Deployment Guide](deployment/DEPLOYMENT_GUIDE.md) |
 | Add a new article | [Developer Guide](development/DEVELOPER_GUIDE.md) → "Adding New Articles" |
 | Create a pull request | [Contributing](development/CONTRIBUTING.md) → "Pull Request Process" |
-| Set up my local machine | [Contributing](development/CONTRIBUTING.md) → "Machine Setup" |
 | Run tests | [QE Guide](quality/QE_GUIDE.md) → "Test Environments" |
 | Create a release | [Release Process](release/RELEASE_PROCESS.md) → "Release Checklist" |
 | Fix a production bug | [Release Process](release/RELEASE_PROCESS.md) → "Hotfix Procedure" |
@@ -185,10 +187,10 @@ Found something unclear? Help improve it!
 
 ## 📊 Documentation Statistics
 
-- **Total Guides**: 12
+- **Total Guides**: 13
 - **Categories**: 6
-- **Average Reading Time**: 10-30 minutes per guide
-- **Most Comprehensive**: AWS Infrastructure (multi-environment setup)
+- **Average Reading Time**: 10-45 minutes per guide
+- **Most Comprehensive**: Machine Setup (530+ lines), AWS Infrastructure (941 lines)
 - **Last Updated**: November 2025
 
 ---
