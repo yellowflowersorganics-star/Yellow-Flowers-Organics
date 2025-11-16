@@ -334,7 +334,11 @@ mkdir .github
 mkdir .github/workflows
 ```
 
-### Step 3.2: Create Basic HTML Structure
+### Step 3.2: Create Your Website Files
+
+Create a simple `index.html` file. You can use the minimal example below, or use your own existing HTML/CSS/JavaScript files.
+
+**Minimal Example** (Copy this if you're just testing):
 
 **Create `index.html`**:
 
@@ -345,148 +349,47 @@ mkdir .github/workflows
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Awesome Website</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        h1 { font-size: 3rem; margin-bottom: 1rem; }
+        p { font-size: 1.2rem; margin-bottom: 0.5rem; }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>My Awesome Website</h1>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="home">
-            <h2>Welcome!</h2>
-            <p>This is my awesome website.</p>
-        </section>
-
-        <section id="about">
-            <h2>About</h2>
-            <p>Tell your story here.</p>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Get in touch: hello@example.com</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 My Awesome Website. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <h1>🚀 My Website is Live!</h1>
+    <p>This website successfully deployed to AWS.</p>
+    <p>Ready to build something amazing!</p>
 </body>
 </html>
 ```
 
-**Create `styles.css`**:
+**💡 Using Your Own Code?**
 
-```css
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+If you already have HTML, CSS, and JavaScript files:
+- Copy them to this folder
+- Make sure you have an `index.html` file
+- Skip the example above and use your own!
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-}
+**Want a Complete Starter Template?**
 
-header {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 1rem 0;
-}
-
-nav {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    transition: opacity 0.3s;
-}
-
-nav a:hover {
-    opacity: 0.8;
-}
-
-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
-}
-
-section {
-    margin-bottom: 4rem;
-}
-
-h2 {
-    color: #667eea;
-    margin-bottom: 1rem;
-}
-
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 2rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-        gap: 0.5rem;
-    }
-}
-```
-
-**Create `script.js`**:
-
-```javascript
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
-console.log('Website loaded successfully! 🚀');
-```
+Check out our [Yellow Flowers website code](../../index.html) for a full example with:
+- Responsive navigation
+- Multiple sections
+- Professional styling
+- Mobile-friendly design
 
 ### Step 3.3: Create Essential Files
 
@@ -584,20 +487,31 @@ Copyright © 2025
 }
 ```
 
-### Step 3.4: Test Locally
+### Step 3.4: Test Locally (Quick Check)
+
+Before pushing to GitHub, make sure your website works:
 
 ```bash
-# Install dev dependencies
-npm install
+# Simply open index.html in your browser
 
-# Start local server
-npm start
-# OR
-python -m http.server 8000
+# Windows:
+start index.html
 
-# Open browser to http://localhost:8000
-# Verify website looks good
+# macOS:
+open index.html
+
+# Linux:
+xdg-open index.html
+
+# Your website should open in the browser
+# Verify it looks good!
 ```
+
+**✅ What to check:**
+- Page loads without errors
+- Text is visible
+- Styling looks right (if you have CSS)
+- No browser console errors (press F12 to check)
 
 ### Step 3.5: First Commit
 
@@ -606,12 +520,7 @@ python -m http.server 8000
 git add .
 
 # Create first commit
-git commit -m "feat: Initial project setup
-
-- Basic HTML structure with header, nav, main, footer
-- Responsive CSS with gradient header
-- Smooth scrolling JavaScript
-- Essential project files (README, .gitignore, package.json)"
+git commit -m "feat: Initial project setup"
 
 # Add remote (use your repository URL)
 git remote add origin git@github.com:yourusername/my-awesome-website.git
