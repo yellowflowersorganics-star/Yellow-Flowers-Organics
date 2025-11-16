@@ -51,7 +51,7 @@ Create a welcome message or email:
    - Accept
 
 2. **Set up your machine**
-   📖 [Machine Setup Guide](docs/getting-started/MACHINE_SETUP.md)
+   📖 [Machine Setup Guide](01-machine-setup.md)
    - Install Git, Node.js, VS Code
    - Configure GitHub authentication
    - ~45 minutes

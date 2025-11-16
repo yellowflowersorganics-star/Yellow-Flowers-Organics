@@ -28,9 +28,9 @@ Welcome to the team! This guide will help you get started with development, test
 
 ## 🖥️ Machine Setup
 
-> **📖 For detailed setup instructions**, see: [Machine Setup Guide](../getting-started/MACHINE_SETUP.md)
+> **📖 For detailed setup instructions**, see: [Machine Setup Guide](../getting-started/zero-to-production/01-machine-setup.md)
 >
-> This guide covers platform-specific installation for Git, Node.js, VS Code, AWS CLI, and troubleshooting.
+> This guide covers platform-specific installation for Git, Node.js, VS Code, and troubleshooting.
 
 ### Quick Setup (Summary)
 

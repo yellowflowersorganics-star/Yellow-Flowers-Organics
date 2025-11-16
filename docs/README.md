@@ -11,7 +11,7 @@ Welcome to the Yellow Flowers Organic Farm documentation! This index will help y
 | Document | Description | For | Time |
 |----------|-------------|-----|------|
 | **[Zero to Production](getting-started/zero-to-production/README.md)** 🎯 | **Complete journey: Fresh machine → Live website** (Now split into easy phases!) | New projects from scratch | 4-6 hours |
-| **[Machine Setup](getting-started/MACHINE_SETUP.md)** ⭐ | **Complete dev environment setup** (Git, Node.js, AWS CLI, VS Code) | Everyone - Start here! | 45-60 min |
+| **[Machine Setup](getting-started/zero-to-production/01-machine-setup.md)** ⭐ | **Complete dev environment setup** (Git, Node.js, VS Code) | Everyone - Start here! | 45-60 min |
 | [Quick Start](getting-started/QUICK_START.md) | Fast AWS deployment setup (20 mins) | Admins, DevOps | 20 min |
 | [Team Onboarding](getting-started/TEAM_ONBOARDING.md) | Complete onboarding guide for new team members | Everyone | 2-3 hours |
 | [Quick Reference](getting-started/QUICK_REFERENCE.md) | Daily cheat sheet for common tasks | Everyone | Reference |
@@ -88,7 +88,7 @@ Welcome to the Yellow Flowers Organic Farm documentation! This index will help y
 ## 📋 Quick Navigation by Role
 
 ### 🆕 New Team Member
-1. [Machine Setup](getting-started/MACHINE_SETUP.md) - Set up your computer first ⭐
+1. [Machine Setup](getting-started/zero-to-production/01-machine-setup.md) - Set up your computer first ⭐
 2. [Team Onboarding](getting-started/TEAM_ONBOARDING.md) - Complete onboarding guide
 3. [Quick Reference](getting-started/QUICK_REFERENCE.md) - Daily cheat sheet
 4. Your role-specific guide below ⬇️
@@ -133,8 +133,8 @@ Welcome to the Yellow Flowers Organic Farm documentation! This index will help y
 
 | I want to... | Read this |
 |--------------|-----------|
-| Start a new project from scratch | [Zero to Production](getting-started/ZERO_TO_PRODUCTION.md) 🎯 |
-| Set up my computer for development | [Machine Setup](getting-started/MACHINE_SETUP.md) ⭐ |
+| Start a new project from scratch | [Zero to Production](getting-started/zero-to-production/README.md) 🎯 |
+| Set up my computer for development | [Machine Setup](getting-started/zero-to-production/01-machine-setup.md) ⭐ |
 | Set up dev and production environments | [AWS Infrastructure](deployment/AWS_INFRASTRUCTURE.md) ⭐ |
 | Deploy the website to AWS (simple) | [Quick Start](getting-started/QUICK_START.md) or [Deployment Guide](deployment/DEPLOYMENT_GUIDE.md) |
 | Add a new article | [Developer Guide](development/DEVELOPER_GUIDE.md) → "Adding New Articles" |
