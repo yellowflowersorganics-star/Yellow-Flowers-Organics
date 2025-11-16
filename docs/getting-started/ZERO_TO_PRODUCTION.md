@@ -57,8 +57,8 @@ By the end of this guide, you'll have:
 
 | Phase | Task | Time | Can Skip? |
 |-------|------|------|-----------|
-| 1 | Machine Setup | 45-60 min | ❌ Required |
-| 2 | GitHub Setup | 15-20 min | ❌ Required |
+| 1 | Machine Setup | 30-45 min | ❌ Required |
+| 2 | GitHub Setup (Account + Auth) | 20-30 min | ❌ Required |
 | 3 | Project Creation | 30-45 min | ❌ Required |
 | 4 | AWS Infrastructure | 60-90 min | ❌ Required |
 | 5 | GitHub Workflows | 20-30 min | ❌ Required |
@@ -125,42 +125,7 @@ git config --global color.ui auto
 git config --list --global
 ```
 
-### Step 1.3: Set Up GitHub Authentication
-
-**Option A: SSH Keys (Recommended)**
-
-```bash
-# Generate SSH key
-ssh-keygen -t ed25519 -C "your.email@example.com"
-# Press Enter for default location
-# Enter a passphrase (or leave empty)
-
-# Start ssh-agent and add key
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_ed25519
-
-# Copy public key
-cat ~/.ssh/id_ed25519.pub
-# Copy the output
-
-# Add to GitHub
-# Go to: https://github.com/settings/keys
-# Click "New SSH key"
-# Paste your key and save
-
-# Test connection
-ssh -T git@github.com
-# Should see: "Hi username! You've successfully authenticated..."
-```
-
-**Option B: Personal Access Token**
-
-1. Go to: https://github.com/settings/tokens
-2. "Generate new token (classic)"
-3. Select scopes: `repo`, `workflow`
-4. Copy token (save it securely!)
-
-### Step 1.4: Install VS Code Extensions
+### Step 1.3: Install VS Code Extensions
 
 ```bash
 # Essential extensions
@@ -178,7 +143,6 @@ git --version           # Should show version
 node --version          # Should show v16+
 npm --version           # Should show version
 code --version          # Should show version
-ssh -T git@github.com   # Should authenticate
 ```
 
 ---
@@ -193,7 +157,62 @@ If you don't have one:
 3. Verify email address
 4. Choose free plan
 
-### Step 2.2: Create New Repository
+### Step 2.2: Set Up GitHub Authentication
+
+Now that you have a GitHub account, set up authentication so you can push/pull code.
+
+**Option A: SSH Keys (Recommended)**
+
+```bash
+# Generate SSH key
+ssh-keygen -t ed25519 -C "your.email@example.com"
+# Press Enter for default location
+# Enter a passphrase (or leave empty)
+
+# Start ssh-agent and add key
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+
+# Copy public key to clipboard
+# Windows (Git Bash):
+cat ~/.ssh/id_ed25519.pub | clip
+
+# macOS:
+pbcopy < ~/.ssh/id_ed25519.pub
+
+# Linux:
+cat ~/.ssh/id_ed25519.pub
+# (manually copy the output)
+```
+
+**Add SSH Key to GitHub**:
+1. Go to: https://github.com/settings/keys
+2. Click **"New SSH key"**
+3. Title: `My Development Machine` (or any name)
+4. Key type: `Authentication Key`
+5. Paste your public key
+6. Click **"Add SSH key"**
+
+**Test SSH Connection**:
+```bash
+ssh -T git@github.com
+# Should see: "Hi username! You've successfully authenticated..."
+```
+
+**Option B: Personal Access Token (HTTPS)**
+
+1. Go to: https://github.com/settings/tokens
+2. Click **"Generate new token"** → **"Generate new token (classic)"**
+3. Note: `Development Access`
+4. Expiration: `90 days` (or your preference)
+5. Select scopes:
+   - ✅ `repo` (full control)
+   - ✅ `workflow` (update workflows)
+6. Click **"Generate token"**
+7. **Copy the token immediately** (you won't see it again!)
+8. Save it securely (password manager recommended)
+
+### Step 2.3: Create New Repository
 
 1. Go to: https://github.com/new
 2. Configure repository:
@@ -212,6 +231,8 @@ If you don't have one:
 ### ✅ Phase 2 Verification
 
 - [ ] GitHub account created and verified
+- [ ] GitHub authentication set up (SSH or Token)
+- [ ] Authentication tested successfully
 - [ ] Repository created
 - [ ] Repository URL copied
 
@@ -986,8 +1007,9 @@ body:
 
 ### GitHub
 - [ ] GitHub account created
+- [ ] Authentication configured (SSH keys or Personal Access Token)
+- [ ] Authentication tested (can connect to GitHub)
 - [ ] Repository created
-- [ ] SSH keys / Token configured
 - [ ] Can push/pull code
 
 ### Project
