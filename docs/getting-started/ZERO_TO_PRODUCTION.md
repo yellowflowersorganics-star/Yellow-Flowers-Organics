@@ -210,7 +210,82 @@ ssh -T git@github.com
    - ✅ `workflow` (update workflows)
 6. Click **"Generate token"**
 7. **Copy the token immediately** (you won't see it again!)
-8. Save it securely (password manager recommended)
+8. **Save it securely** (see below for how)
+
+**💡 Important: How to Save Your Token Securely**
+
+Your token looks like: `ghp_xJ4K8mN9pQ2rS5tV7wY0zA3bC6dE9fH1` (40+ random characters)
+
+You'll **only see this token ONCE**. If you lose it, you'll have to create a new one. Here's how to save it:
+
+**🔐 Option 1: Password Manager (Recommended)**
+
+A password manager is a secure app that stores all your passwords and tokens in one encrypted place. You only need to remember ONE master password.
+
+**Free Password Managers**:
+- **Bitwarden** (Best for beginners): https://bitwarden.com/
+  - Free forever
+  - Works on all platforms
+  - Cloud sync included
+  
+- **1Password**: https://1password.com/
+  - Very user-friendly
+  - Free trial available
+  
+- **Built-in Options** (Already on your computer):
+  - **Windows**: Windows Credential Manager (Control Panel → Credential Manager)
+  - **macOS**: Keychain Access (Applications → Utilities → Keychain Access)
+  - **Linux**: GNOME Keyring (built-in on Ubuntu)
+
+**Quick Bitwarden Setup (5 minutes)**:
+```bash
+1. Go to: https://vault.bitwarden.com/#/register
+2. Create free account
+3. Install browser extension (Chrome/Firefox/Edge)
+4. Click Bitwarden icon → "+" → Add item
+5. Name: "GitHub Personal Access Token"
+   Username: your-github-username
+   Password: [paste your token]
+6. Save
+7. Done! You can now access it anytime
+```
+
+**🔐 Option 2: Secure File on Computer**
+
+If you don't want a password manager:
+```bash
+# Create a secure file
+echo "GitHub Token: ghp_your_token_here" > ~/.github-token.txt
+echo "Date: $(date)" >> ~/.github-token.txt
+echo "Expires: 90 days from today" >> ~/.github-token.txt
+
+# Make it readable only by you
+chmod 600 ~/.github-token.txt
+
+# IMPORTANT: Never commit this file to Git!
+echo ".github-token.txt" >> ~/.gitignore
+```
+
+**🔐 Option 3: Write on Paper**
+
+Simple and secure:
+```
+Write on paper and keep safe:
+┌──────────────────────────────────┐
+│ GitHub Personal Access Token     │
+│ Created: Nov 16, 2025            │
+│ Username: yourusername           │
+│ Token: ghp_xJ4K8mN9pQ2rS5t...    │
+│ Expires: Feb 16, 2026            │
+└──────────────────────────────────┘
+```
+
+**⚠️ Security Rules**:
+- ❌ **Never** commit tokens to Git
+- ❌ **Never** share tokens with anyone
+- ❌ **Never** post tokens in Slack/Discord/email
+- ✅ Store securely (password manager, encrypted file, or paper)
+- ✅ Regenerate if you think it's compromised
 
 ### Step 2.3: Create New Repository
 
