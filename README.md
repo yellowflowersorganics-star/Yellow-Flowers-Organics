@@ -73,6 +73,16 @@ Yellow-Flowers-Organics/
 
 > **📂 [View Complete Documentation Index](docs/README.md)** ← Start here for organized docs!
 
+### 🎯 New Project from Scratch?
+
+**📖 [Zero to Production Guide](docs/getting-started/ZERO_TO_PRODUCTION.md)** 🚀
+
+Complete step-by-step guide to go from a fresh machine with just an idea → Live website on AWS with dev and production environments. Takes 4-6 hours.
+
+Covers: Machine setup, GitHub, project creation, AWS infrastructure, CI/CD, branch protection, and first deployment!
+
+---
+
 ### 🎯 Quick Start by Role
 
 | If you are... | Start with... | Then read... |

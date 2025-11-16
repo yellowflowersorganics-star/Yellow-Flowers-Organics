@@ -8,14 +8,16 @@ Welcome to the Yellow Flowers Organic Farm documentation! This index will help y
 
 **New to the project? Start here!**
 
-| Document | Description | For |
-|----------|-------------|-----|
-| **[Machine Setup](getting-started/MACHINE_SETUP.md)** ⭐ | **Complete dev environment setup** (Git, Node.js, AWS CLI, VS Code) | Everyone - Start here! |
-| [Quick Start](getting-started/QUICK_START.md) | Fast AWS deployment setup (20 mins) | Admins, DevOps |
-| [Team Onboarding](getting-started/TEAM_ONBOARDING.md) | Complete onboarding guide for new team members | Everyone |
-| [Quick Reference](getting-started/QUICK_REFERENCE.md) | Daily cheat sheet for common tasks | Everyone |
+| Document | Description | For | Time |
+|----------|-------------|-----|------|
+| **[Zero to Production](getting-started/ZERO_TO_PRODUCTION.md)** 🎯 | **Complete journey: Fresh machine → Live website** | New projects from scratch | 4-6 hours |
+| **[Machine Setup](getting-started/MACHINE_SETUP.md)** ⭐ | **Complete dev environment setup** (Git, Node.js, AWS CLI, VS Code) | Everyone - Start here! | 45-60 min |
+| [Quick Start](getting-started/QUICK_START.md) | Fast AWS deployment setup (20 mins) | Admins, DevOps | 20 min |
+| [Team Onboarding](getting-started/TEAM_ONBOARDING.md) | Complete onboarding guide for new team members | Everyone | 2-3 hours |
+| [Quick Reference](getting-started/QUICK_REFERENCE.md) | Daily cheat sheet for common tasks | Everyone | Reference |
 
-**👉 Start Path**: Machine Setup → Team Onboarding → Quick Reference → Your Role-Specific Guide
+**👉 Starting from scratch?** Follow **Zero to Production** guide  
+**👉 Joining existing project?** Start Path: Machine Setup → Team Onboarding → Quick Reference → Your Role-Specific Guide
 
 ---
 
@@ -131,6 +133,7 @@ Welcome to the Yellow Flowers Organic Farm documentation! This index will help y
 
 | I want to... | Read this |
 |--------------|-----------|
+| Start a new project from scratch | [Zero to Production](getting-started/ZERO_TO_PRODUCTION.md) 🎯 |
 | Set up my computer for development | [Machine Setup](getting-started/MACHINE_SETUP.md) ⭐ |
 | Set up dev and production environments | [AWS Infrastructure](deployment/AWS_INFRASTRUCTURE.md) ⭐ |
 | Deploy the website to AWS (simple) | [Quick Start](getting-started/QUICK_START.md) or [Deployment Guide](deployment/DEPLOYMENT_GUIDE.md) |
@@ -187,10 +190,10 @@ Found something unclear? Help improve it!
 
 ## 📊 Documentation Statistics
 
-- **Total Guides**: 13
+- **Total Guides**: 14
 - **Categories**: 6
-- **Average Reading Time**: 10-45 minutes per guide
-- **Most Comprehensive**: Machine Setup (530+ lines), AWS Infrastructure (941 lines)
+- **Average Reading Time**: 10-60 minutes per guide
+- **Most Comprehensive**: Zero to Production (full workflow), AWS Infrastructure (941 lines), Machine Setup (530+ lines)
 - **Last Updated**: November 2025
 
 ---
