@@ -10,13 +10,13 @@ Welcome to the Yellow Flowers Organic Farm documentation! This index will help y
 
 | Document | Description | For | Time |
 |----------|-------------|-----|------|
-| **[Zero to Production](getting-started/ZERO_TO_PRODUCTION.md)** 🎯 | **Complete journey: Fresh machine → Live website** | New projects from scratch | 4-6 hours |
+| **[Zero to Production](getting-started/zero-to-production/README.md)** 🎯 | **Complete journey: Fresh machine → Live website** (Now split into easy phases!) | New projects from scratch | 4-6 hours |
 | **[Machine Setup](getting-started/MACHINE_SETUP.md)** ⭐ | **Complete dev environment setup** (Git, Node.js, AWS CLI, VS Code) | Everyone - Start here! | 45-60 min |
 | [Quick Start](getting-started/QUICK_START.md) | Fast AWS deployment setup (20 mins) | Admins, DevOps | 20 min |
 | [Team Onboarding](getting-started/TEAM_ONBOARDING.md) | Complete onboarding guide for new team members | Everyone | 2-3 hours |
 | [Quick Reference](getting-started/QUICK_REFERENCE.md) | Daily cheat sheet for common tasks | Everyone | Reference |
 
-**👉 Starting from scratch?** Follow **Zero to Production** guide  
+**👉 Starting from scratch?** Follow **[Zero to Production](getting-started/zero-to-production/README.md)** guide (now organized into 8 easy phases!)  
 **👉 Joining existing project?** Start Path: Machine Setup → Team Onboarding → Quick Reference → Your Role-Specific Guide
 
 ---

@@ -75,9 +75,11 @@ Yellow-Flowers-Organics/
 
 ### 🎯 New Project from Scratch?
 
-**📖 [Zero to Production Guide](docs/getting-started/ZERO_TO_PRODUCTION.md)** 🚀
+**📖 [Zero to Production Guide](docs/getting-started/zero-to-production/README.md)** 🚀
 
 Complete step-by-step guide to go from a fresh machine with just an idea → Live website on AWS with dev and production environments. Takes 4-6 hours.
+
+**NOW REORGANIZED**: Split into 8 easy-to-follow phases + troubleshooting guide + checklist!
 
 Covers: Machine setup, GitHub, project creation, AWS infrastructure, CI/CD, branch protection, and first deployment!
 
